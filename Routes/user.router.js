@@ -4,7 +4,7 @@ const { teste1 } = require('../Controller');
 
 const router = express.Router();
 
-router.get('/', teste1.getUser);
+router.get('/', teste1.getUser, teste1.getUsers);
 
 // router.get('/', );
 
