@@ -1,6 +1,6 @@
 const express = require('express');
 
-var teste1 = require("../teste1");
+var { teste1 } = require("../Controller");
 
 const router = express.Router();
 
