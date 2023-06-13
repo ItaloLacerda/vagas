@@ -1,10 +1,10 @@
 const express = require('express');
 
-var { teste1 } = require("../Controller");
+const { teste1 } = require('../Controller');
 
 const router = express.Router();
 
-router.get('/', teste1.getUser );
+router.get('/', teste1.getUser);
 
 // router.get('/', );
 

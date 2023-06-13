@@ -2,13 +2,14 @@ var data =  require("./fakeData");
 
 const getUser = ( req, res, next ) => {
     
-    var name =  req.query.name;
+    // var name =  req.query.name;
 
-    for(let i = 0; i < data.length;  i++) {
-        if(i.name == name) {
-            res.send(data[i]);
-        }
-    }
+    // for(let i = 0; i < data.length;  i++) {
+    //     if(i.name == name) {
+    //         res.send(data[i]);
+    //     }
+    // }
+    return res.status(200).json({ ok: 'NOK' });
 
 };
 
