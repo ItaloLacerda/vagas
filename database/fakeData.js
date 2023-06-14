@@ -6,4 +6,11 @@ const fakeData = [
   },
 ];
 
-module.exports = fakeData;
+const countData = [
+  {
+    id: 1,
+    readings: 0,
+  },
+];
+
+module.exports = { fakeData, countData };
