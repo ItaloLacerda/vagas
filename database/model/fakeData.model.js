@@ -1,4 +1,4 @@
-const fakeData = require('../fakeData');
+const { fakeData } = require('../fakeData');
 
 const findAll = () => fakeData;
 
