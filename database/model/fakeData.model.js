@@ -20,8 +20,19 @@ const postUser = (newUser) => {
   return { id, ...newUser };
 };
 
+const deleteUser = (name) => {
+  for (let i = 0; i < fakeData.length; i += 1) {
+    if (fakeData[i].name === name.replace('_', ' ')) {
+      fakeData.splice(i, 1);
+      return 'Success';
+    }
+  }
+  return 'Not found';
+};
+
 module.exports = {
   findAll,
   findOne,
   postUser,
+  deleteUser,
 };
