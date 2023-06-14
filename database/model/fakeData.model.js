@@ -12,7 +12,16 @@ const findOne = (name) => {
   return [];
 };
 
+const postUser = (newUser) => {
+  const id = fakeData[fakeData.length - 1].id + 1;
+
+  fakeData.push({ id, ...newUser });
+
+  return { id, ...newUser };
+};
+
 module.exports = {
   findAll,
   findOne,
+  postUser,
 };
