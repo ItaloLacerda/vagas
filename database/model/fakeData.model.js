@@ -30,9 +30,23 @@ const deleteUser = (name) => {
   return 'Not found';
 };
 
+const updateUser = (id, update) => {
+  const index = fakeData.findIndex((user) => user.id === Number(id));
+  if (index === -1) {
+    return 'Not found';
+  }
+  fakeData[index] = {
+    ...fakeData[index],
+    ...update,
+  };
+
+  return fakeData[index];
+};
+
 module.exports = {
   findAll,
   findOne,
   postUser,
   deleteUser,
+  updateUser,
 };
