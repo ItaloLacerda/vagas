@@ -8,7 +8,7 @@ const getUser = (req, res, next) => {
     return next();
   }
 
-  return res.status(200).json(user);
+  return res.status(200).json(user.response);
 };
 
 const getUsers = (_req, res) => res.status(200).json(teste1.getUsers().response);
