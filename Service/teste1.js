@@ -1,9 +1,11 @@
 const { fakeDataModel } = require('../database/model');
+const { countDataModel } = require('../database/model');
 
 const getUser = (name) => {
   if (name) {
     const user = fakeDataModel.findOne(name);
     if (user.length === 1) {
+      countDataModel.updateCount(user[0].id);
       return { type: '', response: user[0] };
     }
   }
