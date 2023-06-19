@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-const { userRouter } = require('./Routes');
+const { userRouter, loginRouter } = require('./Routes');
 
 app.set('view engine', 'jade');
 
@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(`${__dirname}/public`));
 
+app.use('/login', loginRouter);
 app.use('/user', userRouter);
 
 const port = 3000;
